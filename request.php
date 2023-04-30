@@ -2,7 +2,7 @@
 
 require __DIR__ . '/vendor/autoload.php';
 use Orhanerday\OpenAi\OpenAi;
-$open_ai = new OpenAi ('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');
+$open_ai = new OpenAi ('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');
 // get prompt parameter
 $prompt = $_GET['prompt'];
 // set api data
