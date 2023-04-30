@@ -1,10 +1,22 @@
 <?php
 
-require __DIR__ . '/vendor/autoload.php';
+require_once realpath(__DIR__ . '/vendor/autoload.php');
+// Looing for .env at the root directory
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+$dotenv->load();
+
 use Orhanerday\OpenAi\OpenAi;
-$open_ai = new OpenAi ('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');
+$open_ai = new OpenAi($_ENV['OPEN_AI_API_KEY']);
+$open_ai->setORG($_ENV['OPEN_AI_ORG_ID']);
+$open_ai->setHeader(["Connection"=>"keep-alive"]);
+$open_ai->setBaseURL($_ENV['OPEN_AI_Base_URL']);
+
 // get prompt parameter
 $prompt = $_GET['prompt'];
+
+// set header
+header('Cache-Control: no-cache');
+
 // set api data
 $complete = $open_ai->completion([
     'model' => 'text-davinci-003',
