@@ -1,11 +1,13 @@
 /* option fonts */
 @import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Roboto&display=swap');
 body{
-    background-color: #701fbd;
+    background-color: #1ABC9C;
+    
 }
 .container{
     max-width: 1000px;
     margin: auto;
+    border-radius: .35rem;
     padding-bottom: 20px;
     background-color: white;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
@@ -13,9 +15,7 @@ body{
 h2{
     font-weight: 600;
     text-align: center;
-    font-size: 1.7rem;
-    font-style: oblique;
-    margin-top: 25px;
+    font-size: 3rem;
     color: white;
     font-family: 'League Spartan', sans-serif;
 }
@@ -39,7 +39,7 @@ button{
     background-color: transparent;
 }
 button > svg{
-    fill: #7F6DF2;
+    fill: #1ABC9C;
     padding: 0px 4px;
     cursor: pointer;
     outline: none;
